@@ -36,6 +36,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.playfab/combo-sdk -->
+		<dependency>
+			<groupId>com.playfab</groupId>
+			<artifactId>combo-sdk</artifactId>
+			<version>0.118.200901</version>
+		</dependency>
 	</dependencies>
 
 	<build>
