@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Flecks Weather Service</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/indexStyle.css}">
+</head>
+<body>
+<header>
+    <h1>Flecks Weather Service</h1>
+</header>
+<div class="error" th:if="${error}">
+    <h4 th:text="${errorMessage}"></h4>
+</div>
+<div class="developerName" th:if="${aboutDeveloper}">
+    <h2>Developed By: </h2>
+    <h2 th:text="${name}"></h2>
+</div>
+<div class="button-container">
+    <div>
+        <form method="post" th:action="@{/findWeather}" th:object="${player}" style="display: inline-block;">
+            <button class="blue-button" type="submit">Find Weather</button>
+        </form>
+        <form method="post" th:action="@{/temperatureHistory}" style="display: inline-block;">
+            <button class="blue-button" type="submit">Temperature History</button>
+        </form>
+
+        <form method="post" th:action="@{/aboutDeveloper}" style="display: inline-block;">
+            <button class="blue-button" type="submit">About Developer</button>
+        </form>
+    </div>
+    <div>
+        <form method="post" th:action="@{/logout}">
+            <button class="red-button" type="submit">Logout</button>
+        </form>
+    </div>
+
+
+    <div class="bottom-left">
+        <h2>Note:</h2>
+        <p><b>Find Weather</b>: <i>Detect location and shows weather information.</i></p>
+        <p><b>Temperature History</b>: <i>Shows history of temperatures viewed by the you.</i></p>
+        <p><b>About Developer</b>: <i>Shows the developer Name.</i></p>
+    </div>
+</div>
+</body>
+</html>

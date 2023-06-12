@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Weather Information</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/showWeatherStyle.css}">
+</head>
+<body>
+<header>
+    <h1>Weather Information</h1>
+</header>
+<table>
+    <tr>
+        <th>Field</th>
+        <th>Value</th>
+    </tr>
+
+    <tr>
+        <td style="color: #7c7cdc;">Weather Description</td>
+        <td style="color: #FF5733;" th:text="${weatherInformation.getWeatherDescription()}"></td>
+    </tr>
+    <tr>
+        <td style="color: #7c7cdc;">Temperature</td>
+        <td style="color: #FF5733;" th:text="${weatherInformation.getTemperature()}"></td>
+    </tr>
+
+    <tr>
+        <td style="color: #7c7cdc;">Temperature Unit</td>
+        <td style="color: #FF5733;">Fahrenheit</td>
+    </tr>
+
+    <tr>
+        <td style="color: #7c7cdc;">Humidity Percentage</td>
+        <td style="color: #FF5733;" th:text="${weatherInformation.getHumidityPercentage()}"></td>
+    </tr>
+
+    <tr>
+        <td style="color: #7c7cdc;">Wind Speed</td>
+        <td style="color: #FF5733;" th:text="${weatherInformation.getWindSpeed()}"></td>
+    </tr>
+
+    <tr>
+        <td style="color: #7c7cdc;">City</td>
+        <td style="color: #FF5733;" th:text="${weatherInformation.getCity()}"></td>
+    </tr>
+
+    <tr>
+        <td style="color: #7c7cdc;">Country</td>
+        <td style="color: #FF5733;" th:text="${weatherInformation.getCountry()}"></td>
+    </tr>
+</table>
+</body>
+</html>
