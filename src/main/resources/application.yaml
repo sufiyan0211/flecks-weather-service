@@ -1,1 +1,12 @@
 
+server:
+  port: 8082
+
+weather:
+  api:
+    key: ENC(KD9l+ccZp6MHf5Tm1KgyhyJov7CPzPAmLlRhv+8PY1HmQMa1BffcjpxGuTNQ7T7VS5Tzcvch1l5M/Va7AEYkRtPJa4FUB5ZlYb/M+YegxyM=)
+
+playFab:
+  titleId: ENC(FrzDBxVyDMltHB5B2wGUe04eQGhYfks3WdFoU9PlvWQA4LEfRNzt73xjzKY/hQam)
+  developer:
+    secretKey: ENC(/U6LiwVgUx09HZ/IEEnqK5RPH3xLAJsJrKmezBmYvidGD/6g2cHmeZAtxBYj/i7d99OeM7IFy1eNwWHeDLhf4qf1E4YIY+niwnWbmFAKE5JW7+HcPX4EgE5tT3hYBnsk)
